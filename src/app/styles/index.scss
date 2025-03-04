@@ -1,0 +1,49 @@
+@use "reset";
+@use "variables/global" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+html {
+  font-family: "Inter", serif;
+
+  scroll-behavior: smooth;
+  background-color: #06080c;
+}
+
+body {
+  padding: $desktop-padding-top $desktop-padding-right 0 $desktop-padding-left;
+
+  @media (max-width: $breakpoint-xs) {
+    padding: $mobile-padding-top $mobile-padding-right 0 $mobile-padding-left;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+p {
+  color: #ffffff;
+}
+
+button {
+  cursor: pointer;
+  background-color: #eb0237;
+  border: none;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+h1 {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 32px;
+
+  @media (max-width: $breakpoint-xs) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

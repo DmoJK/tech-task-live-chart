@@ -1,0 +1,248 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $breakpoint-xs) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.titleLeftSection {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  .select {
+    background-color: #0f1318;
+    padding: 16px 20px 16px;
+    border-radius: 4px;
+
+    select {
+      color: #fff;
+      background-color: #0f1318;
+      padding-right: 10px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    width: 100%;
+    flex-direction: column;
+    gap: 14px;
+
+    .select {
+      width: 100%;
+
+      select {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.titleRightSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .error {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 14px 24px;
+    background-color: #0f1318;
+    border-radius: 4px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    height: 56px;
+    width: 204px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21.78px;
+
+    &.loading {
+      animation: load 3s linear infinite;
+
+      & > * {
+        animation: rotate 3s linear infinite;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    width: 100%;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.itemBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: #0b0e12;
+  cursor: pointer;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 36px;
+
+  .team {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 8px;
+  }
+}
+
+.itemDetail {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 12px;
+
+  @media (max-width: $breakpoint-xs) {
+    flex-direction: column;
+  }
+}
+
+.itemDetailTeam {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  span {
+    color: #fafafa66;
+  }
+}
+
+.itemDetailTeamPlayers {
+  display: flex;
+  gap: 8px;
+
+  & > * {
+    flex: 1;
+    background-color: #101318;
+    padding: 8px 24px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    img {
+      height: 36px;
+      width: 36px;
+    }
+
+    @media (max-width: $breakpoint-xl) {
+      flex-direction: column;
+      gap: 4px;
+      justify-content: center;
+    }
+  }
+}
+
+.itemDetailTeamInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 24px;
+  background-color: #101318;
+
+  & > * {
+    flex: 1;
+    text-align: center;
+  }
+
+  @media (max-width: $breakpoint-xl) {
+    padding: 14px 6px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+
+  :first-child {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}
+
+.scoreChanging {
+  transform: scale(1.1);
+}
+
+.chip {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  width: 92px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes load {
+  0% {
+    background-color: #eb0237;
+  }
+  25% {
+    background-color: #a01131;
+  }
+  50% {
+    background-color: #701328;
+  }
+  75% {
+    background-color: #a01131;
+  }
+  100% {
+    background-color: #eb0237;
+  }
+}

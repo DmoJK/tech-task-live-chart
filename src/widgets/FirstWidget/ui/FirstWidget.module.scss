@@ -1,0 +1,110 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleRightSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .error {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 14px 24px;
+    background-color: #0f1318;
+    border-radius: 4px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    height: 56px;
+    width: 204px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21.78px;
+
+    &.loading {
+      animation: load 3s linear infinite;
+
+      & > * {
+        animation: rotate 3s linear infinite;
+      }
+    }
+  }
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 36px;
+  background-color: #0b0e12;
+
+  .team {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.chip {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  width: 92px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes load {
+  0% {
+    background-color: #eb0237;
+  }
+  25% {
+    background-color: #a01131;
+  }
+  50% {
+    background-color: #701328;
+  }
+  75% {
+    background-color: #a01131;
+  }
+  100% {
+    background-color: #eb0237;
+  }
+}

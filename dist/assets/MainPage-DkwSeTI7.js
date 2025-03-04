@@ -1,0 +1,1 @@
+import{u as e,j as s}from"./index-CQGzznl7.js";const i=()=>{const t=e();return s.jsxs("div",{children:[s.jsx("button",{onClick:()=>t("/first"),children:"First Test Task"}),s.jsx("button",{onClick:()=>t("/second"),children:"Second Test Task"})]})};export{i as default};
